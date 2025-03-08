@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--========== BOX ICONS ==========-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <!-- Javascript -->
+    <script src="{{ url_for('static', filename='js/jquery_3.6.0.min.js') }}"></script>
+   
+    <title>Chilli Leaf Disease Detection</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="https://findlogovector.com/wp-content/uploads/2019/03/vit-bhopal-logo-vector.png" alt="">
+        <p>Chilli Leaf Detection Disease</p>
+      </div>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#Dashboard">Home</a>
+        <a href="#Aplikasi">Detection</a>
+        <a href="#Card">Contact</a>
+      </nav>
+    </header>
+    <div class="nav-bg"></div>
+    <script src="static/js/n.js"></script>
+    <section id="Dashboard" class="dash_container">
+        <div class="konten__glass">
+            <div class="dash__data">
+              <h3 class="dash_title">Welcome</h3>
+              <span class="dash_capt">
+                Your plants are an important part of your daily life,
+                and this application helps keep them healthy.
+                With CNN (Convolutional Neural Networks) technology, you can
+                easily and quickly detect signs of disease in chili and tomato plants.
+                Let's work together to ensure your plants thrive.
+            </span>
+            </div>
+            <div class="img_group">
+                <img src="static/images/tct.png" alt="" class="img_konten2"/>
+                <img src="static/images/kd3.png" alt="" class="img_konten"/>
+            </div>
+        <div>
+            <a href="#Aplikasi" class="dash__button1">START</a>
+        </div>
+        </div>
+    </section>
+    <section id="Aplikasi" class="app_container">
+      <div class="konten__glass">
+          <div class="dash__data">
+            <h3 class="dash_title">Start Detection</h3>
+            <img src="{{ url_for('static', filename='images/deteksi.png') }}" width="300">
+            <p class="dash_capt">
+              Please upload an image showing the condition of the leaves or fruits
+            </p>
+          </div>
+
+        <div class="col-sm-6">
+          <!-- Prediction Results Section -->
+          <div id="hasil_prediksi" align="center">
+            <!-- Prediction results will be displayed here -->
+          </div>
+
+          <script src="{{ url_for('static', filename='js/client_side.js') }}"></script>
+          <form style="margin-left: 50px;" method="POST" enctype="multipart/form-data" id="uploadForm">
+            <p>
+                <!-- Button to open the file gallery -->
+                <input type="file" id="input_gambar" name="file" accept="image/*">
+            </p>
+          </form>
+          <div>
+            <br />
+            <button type="submit" id="prediksi_submit" class="dash__button">PREDICT</button> 
+          </div>
+        </div>
+
+      </div>
+  </section>
+  <div id="visualizations" align="center"></div>
+  </body>
+
+  <footer>
+    <section id="Card" class="card">
+      <div class="card__circle card__circle1"></div>
+      <div class="card__circle card__circle2"></div>
+
+      <div class="card__container bd-container">
+        <div class="card__glass">
+          <img src="https://media.licdn.com/dms/image/v2/C4D03AQG4LDDnhQsYoA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1596643392140?e=1741219200&v=beta&t=qGzeIXM4QH-yWUM1qnYgOQaaSWpQkreGh-6ncTzJqJU" alt="" class="card__img" />
+
+          <div class="card__data">
+            <h4 class="card__title">Harika Sunanda <br> (24MCA10089)</h4>
+            <span class="card__profession">Group Leader</span>
+          </div>
+        </div>
+
+        <div class="card__glass">
+          <img src="static/images/profil.jpg" alt="" class="card__img" />
+
+          <div class="card__data">
+            <h4 class="card__title">Teja Nareddy <br> (24MCA10033)</h4>
+            <span class="card__profession">Student</span>
+          </div>
+
+        
+        </div>
+
+        <div class="card__glass">
+          <img src="static/images/profil.jpg" alt="" class="card__img" />
+
+          <div class="card__data">
+            <h4 class="card__title">Karthik Krishna <br> (24MCA10013)</h4>
+            <span class="card__profession">Student</span>
+          </div>
+        </div>
+
+        <div class="card__glass">
+          <img src="static/images/profil.jpg" alt="" class="card__img" />
+
+          <div class="card__data">
+            <h4 class="card__title">Uday Kumar <br> (24MCA10114)</h4>
+            <span class="card__profession">Student</span>
+          </div>
+        </div>
+
+        <div class="card__glass">
+          <img src="static/images/profil.jpg" alt="" class="card__img" />
+
+          <div class="card__data">
+            <h4 class="card__title">Harsh Uniyal <br> (24MCA10085)</h4>
+            <span class="card__profession">Student</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+</html>
